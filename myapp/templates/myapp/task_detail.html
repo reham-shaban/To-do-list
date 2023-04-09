@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block thelist %}
+
+<div class="card">
+    <h1> {{task.title}} </h1>
+
+    <a class="delete-button" href="{% url 'myapp:task-delete' task.id %}"><i class="fas fa-trash"></i></a>
+
+    <p>
+        <span class="checked">{% if task.completed %} ✓ {% endif %}</span>
+        {{ task.description }}
+    </p>    
+    
+    <a href="{% url 'myapp:task-update' task.id%}">Update</a>  
+</div>
+
+{% endblock %}

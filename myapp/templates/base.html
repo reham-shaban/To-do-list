@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	
+	<link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+	{% if user.is_authenticated %}
+
+		<div class="sidebar">
+			<h1 class="user-name">{{request.user}}</h1>
+			<a href="/">Home</a>
+			<a href="/create">Create</a>
+			<a href="/logout">Logout</a>
+		</div>
+
+		<div class="container">
+			{% block thelist %}
+			{% endblock %}
+		</div>
+	
+	{% else %}
+
+	<div>
+	{% block login %}
+		<p>Don't have an account? Create one <a href="/register" style="color: blue;">here</a></p>
+		<p>Already have an account? <a href="/login" style="color:blue; text-align:right;">Login</a></p>
+	{% endblock login %}
+	</div>
+
+	{% endif %}
+	
+	
+</body>
+</html>

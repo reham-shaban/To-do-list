@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block thelist %}
+
+    <h3>You have {{count}} uncompleted tasks.</h3>
+
+    <form method="GET" class="search-form">
+        <input type="text" name="search-area" placeholder="Search..." value={{search_input}}>
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>  
+
+    {% if tasks %}
+
+        {% for task in tasks %}
+            <div class="card">
+                <span class="checked">{% if task.completed %} ✓ {% endif %}</span>
+                <a class="card-title" href="{{task.id}}">{{task.title}}</a>
+                <a class="delete-button" href="{% url 'myapp:task-delete' task.id %}"><i class="fas fa-trash"></i></a>
+                <div class="clearfix"></div>
+            </div>
+        {% endfor %}
+
+        <div class="btn-container">
+            <button class="btn">
+                <a href="create" style="color: white;">Add New Task</a>
+            </button>
+        </div>
+
+    {% else %}
+        <p>No tasks added yet.</p>
+    {% endif %}
+
+{% endblock %}
+
