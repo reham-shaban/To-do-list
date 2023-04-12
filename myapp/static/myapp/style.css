@@ -1,0 +1,172 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 30px;
+    padding: 20px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.card-title {
+    float: left;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+/* Define styles for the sidebar */
+.sidebar {
+background-color: #f1f1f1;
+height: 100%;
+width: 200px;
+position: fixed;
+top: 0;
+left: 0;
+padding-top: 20px;
+}
+
+.user-name {
+    margin: 20px;
+    color: #4CAF50;
+}
+
+/* Define styles for the links in the sidebar */
+.sidebar a {
+display: block;
+color: black;
+padding: 16px;
+text-decoration: none;
+}
+
+/* Add a hover effect to the links */
+.sidebar a:hover {
+background-color: #555;
+color: white;
+}
+
+.delete-button {
+background-color: none;
+color: red;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+float: right;
+}
+
+.delete-button:hover {
+background-color: darkred;
+}
+
+.clearfix {
+clear: both;
+}
+
+/* Style for the checked class */
+.checked {
+    font-size: 24px;
+    color: #4CAF50; /* Green color */
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* this sets the height of the container to the height of the viewport */
+  }
+
+/* Style for the search bar */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+  
+.search-form input[type="text"] {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    flex-grow: 1;
+}
+  
+.search-form button[type="submit"] {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f2f2f2;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.search-form button[type="submit"]:hover {
+    background-color: #e0e0e0;
+}
+  
+.fa-search {
+    color: #888;
+}
+  
